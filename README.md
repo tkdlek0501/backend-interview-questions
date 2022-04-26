@@ -287,5 +287,100 @@ Backend  면접 질문 정리
   <p>연관 관계의 주인은 데이터 제어의 권한을 가지는 쪽 즉, FK를 가지는 쪽이 돼야합니다.</p>
 </details>
 
-
 ### Java
+<details>
+  <summary>Java 언어에 대해 생각나는대로 간단히 설명해주세요.</summary>
+  <br>
+  <p>객체 지향 언어이고 컴파일 언어입니다. 메모리를 자동으로 관리합니다. 오픈소스 라이브러리가 방대합니다.</p>
+  <p>자바를 실행하는 방식은 자바 컴파일러가 자바 소스코드를 읽어 자바 바이트코드로 변환시키고, Class Loader를 통해 class 파일들을 JVM으로 로딩합니다. 로딩된 파일들은 Execution engine을 통해 해석되고 해석된 바이트 코드는 Runtime Data Areas에 배치되어 수행이 됩니다.</p>
+</details>
+
+<details>
+  <summary>Garbage Collection을 설명해주세요.</summary>
+  <br>
+  <p>힙 영역에서 사용하지 않는 객체들을 제거하는 작업을 말합니다. JVM의 GC가 이 불필요한 메모리를 알아서 정리해줍니다.</p>
+  <p>동작 방식은 Stop The World, Mark and Sweep 으로 이뤄집니다.</p>
+  <p>Stop The World는 GC를 실행하기 위해 JVM이 애플리케이션의 실행을 멈추는 작업입니다.</p>
+  <p>Mark and Sweep은 사용되지 않는 메모리를 식별하고 이 식별된 메모리를 해체하는 작업을 뜻합니다.</p>
+</details>
+
+<details>
+  <summary>컬렉션 프레임워크에 대해 설명해주세요.</summary>
+  <br>
+  <p>주로 쓰는 자료구조를 바탕으로 객체, 데이터들을 효율적으로 관리할 수 있는 표준화된 방법을 제공하는 클래스의 집합을 말합니다.</p>
+</details>
+
+<details>
+  <summary>제네릭에 대해 설명해주세요.</summary>
+  <br>
+  <p>제네릭은 타입을 클래스 내부에서 지정하는 것이 아니라 외부에서 사용자에 의해 지정할 수 있게끔한 것을 말합니다. 컴파일 과정에서 타입체크를 해주므로 객체 타입의 안정성을 높이고 형변환의 번거로움을 줄여줍니다. 또한 코드의 재사용성이 높아집니다. <br>
+    ex. ArrayList<타입> = new ArrayList<타입>(); </p>
+</details>
+    
+<details>
+  <summary>애노테이션이란 무엇일까요?</summary>
+  <br>
+  <p>인터페이스를 기반으로 한 문법으로 소스 코드에 추가하여 사용할 수 있는 메타데이터의 일종입니다. 컴파일러 시점에서 문법 에러를 체크하도록, 특정 기능을 실행할 수 있도록 해주는 역할을 합니다.</p>
+</details>
+    
+<details>
+  <summary>오버라이딩과 오버로딩의 차이점에 대해 알려주세요.</summary>
+  <br>
+  <p>오버라이딩은 상위클래스의 메서드를 재정의 하는 것을 의미합니다.</p>
+  <p>오버로딩은 같은 클래스 내에서 메서드의 이름은 같지만 매개변수의 타입, 개수를 다르게 구현하는 것을 말합니다.</p>
+</details>
+    
+<details>
+  <summary>! 인터페이스와 추상클래스의 차이점에 대해 알려주세요.</summary>
+  <br>
+  <p>인터페이스는 구현 객체가 같은 동작을 한다는 것을 보장하기 위해 사용합니다.</p>
+  <p>추상클래스는 객체의 추상적인 상위 개념으로 공통된 개념을 표현할 때 사용합니다.</p>
+</details>
+    
+<details>
+  <summary>클래스와 객체에 대해 설명해주세요.</summary>
+  <br>
+  <p>객체는 물리적으로 존재하거나 추상적으로 생각할 수 있는 것으로 식별 가능한 행위나 속성의 대상을 뜻합니다. 클래스는 이 객체를 정의하는 틀의 의미입니다.</p>
+</details>
+    
+<details>
+  <summary>static의 의미에 대해 설명해주세요.</summary>
+  <br>
+  <p>GC의 관리 영역 밖 static 영역을 의미하며 프로그램 종료시까지 메모리가 할당된 채로 존재하여 어디서든지 참조할 수 있고 공유하게 되는 것을 뜻합니다.</p>
+</details>
+    
+<details>
+  <summary>자바의 원시타입들에 대해서 알려주세요.</summary>
+  <br>
+  <p>boolean(1 byte): 논리형 데이터 타입이고 true=1, false=0 의 값을 가집니다.</p>
+  <p>char (unsigned 2): 문자형</p>
+  <p>byte (1): 정수형</p>
+  <p>short (2): 정수형</p>
+  <p>int (4): 정수형</p>
+  <p>long (8): 정수형</p>
+  <p>float (4): 실수형</p>
+  <p>double (8): 실수형</p>
+</details>
+    
+<details>
+  <summary>접근 제어자에 대해서 설명해주세요.</summary>
+  <br>
+  <p>private, default, protected, public</p>
+  <p>private: 해당 클래스 내에서 접근 가능</p>
+  <p>default: 해당 패키지</p>
+  <p>protected: 상속한 클래스</p>
+  <p>public: 전체 영역</p>
+</details>
+    
+<details>
+  <summary>객체 지향에 대해서 설명해주세요.</summary>
+  <br>
+  <p>프로그래밍에서 필요한 데이터를 추상화시켜 상태와 행위를 가진 객체를 만들고 그 객체들 간의 상호작용을 통해 로직을 구성하는 것을 지향하는 것</p>
+</details>
+
+### 기타
+<details>
+  <summary>테스트, TDD, 작성법</summary>
+  <br>
+  <p></p>
+</details>
