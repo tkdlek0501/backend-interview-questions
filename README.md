@@ -383,10 +383,19 @@ Backend  면접 질문 정리
     <li>HashSet : 순서를 보장하지 않습니다.</li>
     <li>TreeSet : 순서를 보장하고 정렬 방법을 지정할 수 있습니다.</li>
   </ul>
-  <ul>Map : key, value 쌍으로 이루어진 자료구조입니다. 중복을 허용하지 않습니다.
+  <ul>Map : key, value 쌍으로 이루어진 자료구조입니다. key의 중복을 허용하지 않습니다.
     <li>HashMap : 순서를 보장하지 않습니다.</li>
     <li>TreeMap : 순서를 보장하고 key값으로 정렬할 수 있습니다.</li>
   </ul>
+</details>
+
+<details>
+  <summary>ArrayList와 LinkedList의 차이</summary>
+  <br>
+  <p>ArrayList는 index가 있고 LinkedList는 각 원소마다 앞, 뒤 원소의 위치값을 가지고 있습니다.</p>
+  <p>ArrayList는 추가, 삭제가 많다면 계속 요소의 위치를 이동시켜야 하기 때문에(구조 재구성) 비효율적입니다. 데이터를 가져오는 데는 index로 바로 조회하기 때문에 빠릅니다.</p>
+  <p>LinkedList는 추가, 삭제시 노드가 가리키고 있는 주소값만 변경해주면 되기 때문에 효율적이지만, 검색 시에는 불리합니다.</p>
+  <p>정리하자면 정적인 데이터를 활용하며 조회가 빈번하다면 ArrayList 사용, 동적인 추가/ 삭제가 많다면 LinkedList를 사용하는 것이 좋습니다.</p>
 </details>
 
 <details>
