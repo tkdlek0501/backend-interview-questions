@@ -249,21 +249,31 @@ Backend  면접 질문 정리
 </details>
 
 <details>
-  <summary>!! 스프링 MVC 패턴의 동작 원리에 대해서 간단히 설명해주세요.</summary>
+  <summary>스프링 MVC 패턴의 동작 원리에 대해서 간단히 설명해주세요.</summary>
   <br>
-  <p></p>
+  <p>클라이언트로부터 HTTP 요청이 들어오면 *Dispatcher Servlet(프론트 컨트롤러) 가 이를 받습니다.</p>
+  <p>1. 그 다음 핸들러 매핑을 통해 요청 URL에 매핑된 핸들러(컨트롤러) 조회를 합니다.</p>
+  <p>2. 핸들러를 조회했으면 이 핸들러를 처리할 수 있는 핸들러 어댑터를 조회합니다.</p>
+  <p>3. 조회한 핸들러 어댑터를 통해 핸들러 즉, 컨트롤러를 호출하고 ModelAndView를 반환합니다.</p>
+  <p>4. 반환한 ModelAndView를 가지고 Dispatcher Servlet이 viewResolver를 호출해 view를 찾고 반환시킵니다.</p>
+  <p>5. render를 호출하여 view를 랜더링해서 HTML로 응답을 해줍니다.</p>
+  <br>
+  <p>*스프링 부트는 DispatcherServlet을 서블릿으로 자동으로 등록하면서 모든 경로에 대해서 매핑</p>
 </details>
 
 <details>
-  <summary>!! filter와 interceptor의 차이점은 무엇인가요?</summary>
+  <summary>filter와 interceptor의 차이점은 무엇인가요?</summary>
   <br>
-  <p>filter는 servlet에서 전후처리를 담당하고 interceptor는 Spring에서 Handler를 실행하기 전, 후 처리를 담당합니다.</p>
+  <p>filter는 servlet에 요청이 전달되기 전/ 후의 처리를 담당하고 interceptor는 Spring에서 Handler(컨트롤러)를 실행하기 전, 후 처리를 담당합니다.</p>
+  <p>+ filter는 init(필터 초기화), doFilter(처리), destroy(필터 제거) 메서드 / interceptor(handlerInterceptor)는 preHandle(호출 전), postHandle(호출 후), afterCompletion(완료 후 항상) 메서드를 가지고 @configuration 붙은 클래스에 각각 @Bean 등록 / addInterceptors 메서드 override 를 통해 등록</p>
 </details>
 
 <details>
-  <summary>!! POJO란 무엇인가요?</summary>
+  <summary>POJO란 무엇인가요?</summary>
   <br>
-  <p></p>
+  <p>Plain Old Java Object, 오래된 방식의 간단한 자바 오브젝트</p>
+  <p>특정 기술에 종속되어 동작하는 것이 아닌 순수한 자바 객체를 뜻합니다. (ex. getter, setter 메서드로만 이뤄진 객체)</p>
+  <p>POJO를 지향해야 하는 이유는 객체가 어떤 특정 기술에 종속돼버리면 확장성이 떨어지는 등 객체 지향 설계의 장점을 잃게 되기 때문입니다. 또한 비즈니스 로직에 충실한 개발이 가능하도록 하기 때문입니다.</p>
 </details>
 
 
@@ -345,10 +355,11 @@ Backend  면접 질문 정리
 </details>
     
 <details>
-  <summary>! 인터페이스와 추상클래스의 차이점에 대해 알려주세요.</summary>
+  <summary>인터페이스와 추상클래스의 차이점에 대해 알려주세요.</summary>
   <br>
-  <p>인터페이스는 구현 객체가 같은 동작을 한다는 것을 보장하기 위해 사용합니다.</p>
-  <p>추상클래스는 객체의 추상적인 상위 개념으로 공통된 개념을 표현할 때 사용합니다.</p>
+  <p>둘 다 추상 메서드를 가지고 있는 것입니다. 인터페이스는 모든 메서드가 추상메서드인 것이고 추상 클래스는 1개 이상의 추상 메서드를 가지고 있는 것입니다. (인터페이스:기획서, 추상클래스:미완성 설계도, 클래스:완성 설계도)</p>
+  <p>인터페이스는 구현 객체끼리 같은 동작을 한다는 것을 보장하기 위해 사용합니다. 메서드의 선언부만 있어 상속 받는 클래스에서 메서드의 구현을 강제할 수 있습니다.</p>
+  <p>추상클래스는 객체의 추상적인 상위 개념으로 공통된 개념을 표현할 때 사용합니다. 기능을 이용하고 확장시키는데 목적이 있습니다.</p>
 </details>
     
 <details>
