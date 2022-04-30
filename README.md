@@ -458,13 +458,6 @@ Backend  면접 질문 정리
   <p>사용자는 서버 측에 민감 정보를 제공할 필요가 없어지고, 서버 측에서도 민감 정보를 관리할 필요가 없어지는 장점이 있습니다.</p>
 </details>
 
-### I/O
-<details>
-  <summary>! 질문</summary>
-  <br>
-  <p></p>
-</details>
-
 ### Java
 <details>
   <summary>Java 언어에 대해 생각나는대로 간단히 설명해주세요.</summary>
@@ -567,6 +560,15 @@ Backend  면접 질문 정리
   <summary>NPE를 방지하기 위한 방법을 설명해주세요.</summary>
   <br>
   <p>null 체크를 일일이 해줄 수도 있지만, Optional을 이용해 리턴 타입에서 null을 반환하지 않도록 할 수 있습니다.</p>
+</details>
+    
+#### I/O
+<details>
+  <summary>Stream 이란 무엇인지 설명해주세요.</summary>
+  <br>
+  <p>자바에서 모든 입출력은 Stream을 통해 이루어집니다. 입출력 장치와는 무관하게 일관성있게 프로그램을 구현할 수 있도록 제공하는 일종의 가상 통로를 의미합니다.</p>
+  <p>단방향으로 자료가 이동하기 때문에 입력과 출력은 동시에 불가능합니다.</p>
+  <p>queue와 같은 선입선출 구조입니다.</p>
 </details>
 
 ### 기타
