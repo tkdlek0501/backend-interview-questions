@@ -324,6 +324,12 @@ Backend  면접 질문 정리
   <p>※주의: 지연로딩을 쓴다고해서 N+1 문제를 완전히 해결할 수 있는 것은 아니다. 단지 시점을 늦추는 것일 뿐이다. fetch join등을 통해 한방 쿼리로 만들어줘야 N+1 문제를 해결할 수 있다.</p>
 </details>
 
+<details>
+  <summary>기본키 생성전략 </summary>
+  <br>
+  <p></p>
+</details>
+
 ### 자료구조
 
 <details>
