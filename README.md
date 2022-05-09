@@ -179,6 +179,20 @@ Backend  면접 질문 정리
 
 ### Spring
 <details>
+  <summary>스프링은 무엇인지와 스프링의 특징 4가지도 말씀해주세요.</summary>
+  <br>
+  <p>IoC와 DI를 위한 컨테이너로써 동작하는 프레임워크입니다. 애플리케이션의 전영역에 대해 편의 기능 들을 제공합니다.</p>
+  <p>
+    4가지 특징으로는 <br>
+    1. IoC(Inversion of Control) 제어의 역전으로 개발자 대신 자바객체를 직접 관리한다는 점
+    2. DI(Dependency Injection) 각각의 계층들 간 의존성이 존재할 경우 연결해준다는 점
+    3. AOP(Aspect-Oriented Programming) 관점지향 프로그래밍으로써 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리할 수 있다는 점
+    4. 객체의 생명 주기를 관리하기 때문에 일종의 컨테이너라는 점
+    등이 있습니다.
+  </p>
+</details>
+
+<details>
   <summary>DI와 IoC에 대해 설명해주세요.</summary>
   <br>
   <p>IoC 제어 역전을 뜻하며, 인스턴스 생성부터 소멸까지의 생명주기 관리를 개발자가 아닌 컨테이너가 대신 해주는 것입니다.</p>
@@ -249,6 +263,15 @@ Backend  면접 질문 정리
 </details>
 
 <details>
+  <summary>MVC에 대해 설명해주시고, MVC1과 MVC2의 차이점도 설명해주세요.</summary>
+  <br>
+  <p>Model, View, Controller로 나눠서 애플리케이션을 관리하는 패턴을 말합니다.</p>
+  <p>Model은 객체와 비즈니스 로직을 다루는 부분, View는 사용자에게 보여줄 인터페이스, Controller는 Model과 View사이에서 사용자의 요청 처리 및 응답 등의 상호 작용을 하는 부분입니다.</p>
+  <p>MVC1은 view와 controller의 역할이 합쳐져 있는 구조입니다.</p>
+  <p>MVC2는 모델, 뷰, 컨트롤러의 역할을 확실히 나눈 구조입니다.</p>
+</details>
+
+<details>
   <summary>스프링 MVC 패턴의 동작 원리에 대해서 간단히 설명해주세요.</summary>
   <br>
   <p>클라이언트로부터 HTTP 요청이 들어오면 *Dispatcher Servlet(프론트 컨트롤러) 가 이를 받습니다.</p>
@@ -259,6 +282,41 @@ Backend  면접 질문 정리
   <p>5. render를 호출하여 view를 랜더링해서 HTML로 응답을 해줍니다.</p>
   <br>
   <p>*스프링 부트는 DispatcherServlet을 서블릿으로 자동으로 등록하면서 모든 경로에 대해서 매핑</p>
+</details>
+
+<details>
+  <summary>DTO와 VO의 차이점은 무엇인가요?</summary>
+  <br>
+  <p>DTO는 순수하게 데이터의 운반 역할을 하는 객체입니다.</p>
+  <p>로직을 갖고있지 않으며 메서드로 getter, setter만을 가지고 있습니다.</p>
+  <p style="color:gray">view에 객체 넘길 때 Entity대신 DTO로 넘기는 것이 좋기 때문에(필요 없는 데이터 보내는 것 방지, 무결성), 이 DTO를 만드려면 builder등의 메서드가 필요하긴 하다.</p>
+  <p>VO는 값 그 자체를 나타내는 불변 객체입니다. DTO와 다르게 메서드(로직)를 포함할 수 있으며 불변성 보장을 위해 setter는 포함할 수 없고 생성자를 사용해야합니다.</p>
+</details>
+
+<details>
+  <summary>Entity란 무엇인가요?</summary>
+  <br>
+  <p>실제 DB의 테이블과 1:1로 매핑되는 클래스입니다.</p>
+</details>
+
+<details>
+  <summary>Entity와 DTO를 분리하는 이유는 무엇인가요?</summary>
+  <br>
+  <p>DB Layer와 View Layer 사이의 역할을 분리하기 위해서입니다.</p>
+  <p>Entity는 DB로 부터 전달받은 테이블내 필드의 실제 값이나 DB로 넣을 값이 들어있어야하고, DTO는 데이터 전달을 목적으로 사용할 수 있어야합니다.</p>
+</details>
+
+<details>
+  <summary>Servlet이란 무엇인가요? JSP와의 차이는 무엇인가요?</summary>
+  <br>
+  <p>Servlet은 클라이언트로부터 온 요청을 처리하고 그 결과를 반환하는 Servlet 클래스의 구현 규칙을 지킨 기술입니다. 주로 HttpServletResponse, HttpServletRequeset를 이용하고 html을 통해 응답합니다.</p>
+  <p>JSP는 Servlet에서 직접 html 코드를 작성하는 것에 편의성을 주기 위해 나온 기술로 HTML안에서 자바 코드를 작성할 수 있도록 한 기술입니다.</p>
+</details>
+
+<details>
+  <summary>Servlet과 Controller의 차이는 무엇인가요?</summary>
+  <br>
+  <p>Servlet은 웹페이지를 동적으로 생성하여 응답하는 것이고, Controller는 스프링이 DispatcherServlet이란 것으로 Servlet을 대신 해주고(프론트 컨트롤러 역할) 여기서 핸들러 매핑을 통해 호출되는 것을 의미합니다.</p>
 </details>
 
 <details>
