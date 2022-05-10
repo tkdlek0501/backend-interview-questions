@@ -388,9 +388,21 @@ Backend  면접 질문 정리
 </details>
 
 <details>
-  <summary>기본키 생성전략 </summary>
+  <summary>transaction이란 무엇인가요?</summary>
   <br>
-  <p></p>
+  <p>DB에서 논리적 상태 변화, 즉 INSERT, UPDATE, DELETE로 DB의 데이터의 변화가 있는 것을 transaction이라고 합니다.</p>
+  <p>jpa에서는 @Transactional을 이용해 transaction의 범위를 설정하고 엔티티매니저를 통해 transaction할 수 있습니다.</p>
+</details>
+
+<details>
+  <summary>기본키 생성전략은 무엇이있고 어떻게 설정하나요?</summary>
+  <br>
+  <p>@GeneratedValue 를 통해 설정할 수 있습니다.</p>
+  <p>IDENTITY, SEQUENCE, TABLE, AUTO 가 있습니다.</p>
+  <p>1. IDENTITY 는 기본키 생성을 DB에 위임하는 것으로 MySQL의 경우에는 AUTO_INCREMENT 로 생성합니다.</p>
+  <p>2. SEQUENCE는 DB sequence object를 사용해서 기본키를 생성합니다. @SeqenceGenerator가 필요합니다.</p>
+  <p>3. TABLE은 키 생성용 테이블을 만들어 모든 DB에서 사용할 수 있게 합니다. @TableGenerator가 필요합니다.</p>
+  <p>4. AUTO는 기본값으로 자동 지정됩니다.</p>
 </details>
 
 ### 자료구조
@@ -663,6 +675,34 @@ Backend  면접 질문 정리
   <br>
   <p>null 체크를 일일이 해줄 수도 있지만, Optional을 이용해 리턴 타입에서 null을 반환하지 않도록 할 수 있습니다.</p>
 </details>
+
+<details>
+  <summary>gradle 이란 무엇인가요?</summary>
+  <br>
+  <p>Groovy를 기반으로 한 오픈 소스로 공개된 빌드 도구입니다.</p>
+</details>
+
+<details>
+  <summary>restAPI란 무엇인가요?</summary>
+  <br>
+  <p>rest를 기반으로 만들어진 API를 말합니다.</p>
+  <p>rest란 HTTP URI를 통해 자원을 명시하고 HTTP Method를 통해 해당 자원에 대한 CRUD를 적용하는 것을 의미합니다.</p>
+  <p>이 rest를 기반으로 두 소프트웨어 구성 요소가 서로 통신할 수 있게 하는 매커니즘이 restAPI입니다.</p>
+</details>
+    
+<details>
+  <summary>docker란 무엇인가요?</summary>
+  <br>
+  <p>애플리케이션을 신속하게 구축하고 테스트 및 배포할 수 있는 소프트웨어 플랫폼을 말합니다.</p>
+  <p>ex. AWS EC2에 docker를 설치하여 쓸 수 있습니다.</p>
+</details>
+
+<details>
+  <summary>SSH란 무엇인지 설명해주세요</summary>
+  <br>
+  <p>Secure Shell Protocol, 즉 네트워크 프로토콜 중 하나로 컴퓨터와 다른 컴퓨터가 네트워크를 통해 서로 통신할 때 보안적으로 안전하게 통신을 하기위해 사용하는 프로토콜입니다.</p>
+  <p>보안이 필요한 데이터 전송, 원격 제어 등에서 사용합니다.</p>
+</details>    
     
 #### I/O
 <details>
@@ -677,5 +717,17 @@ Backend  면접 질문 정리
 <details>
   <summary>테스트, TDD, 작성법</summary>
   <br>
-  <p></p>
+  <p>Junit을 이용해 테스트</p>
+</details>
+    
+<details>
+  <summary>리눅스란 무엇인가요?</summary>
+  <br>
+  <p>컴퓨터 운영체제 중 하나이며 다중 사용자, 멀티 쓰레드를 지원하는 네트워크 운영체제입니다.</p>
+</details>    
+
+<details>
+  <summary>깃 명령어 사용해본 적 있으신가요?</summary>
+  <br>
+  <p>깃 명령어를 사용하는 대신 보통 소스트리 툴을 이용해서 깃허브에 커밋했습니다...</p>
 </details>
